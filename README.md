@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![alt text](https://github.com/SohamWandkar/portfolio-flexi/tree/main/screenshots?raw=true)
+![alt text](https://github.com/SohamWandkar/portfolio-flexi/tree/main/screenshots/Untitled.png?raw=true)
 
 
 Built using:
