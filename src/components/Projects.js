@@ -11,34 +11,40 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Climate Troopers Website",
+      description: "A website dedicated to climate change awareness.",
       imgUrl: projImg1,
+      link: "https://github.com/Spandan7724/climate_troopers",
+    },
+    {
+      title: "PBL-1",
+      description: "Clubs of SIT",
+      imgUrl: projImg2,
+      link: "https://www.google.com",
+    },
+    {
+      title: "Service Learning",
+      description: "A website for an NGO",
+      imgUrl: projImg3,
+      link: "https://github.com/Spandan7724/service_learning_website",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
+      imgUrl: projImg1,
+      link: "https://www.google.com",
+    },
+    {
+      title: "Searchify",
+      description: "Basically a google clone",
       imgUrl: projImg2,
+      link: "https://www.google.com",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      link: "https://www.google.com",
     },
   ];
 
@@ -51,18 +57,10 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Below are some of the projects I've created, each reflecting my passion for coding and problem-solving. From innovative web applications to unique solutions, these projects showcase my skills and creativity. Feel free to explore!</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
+                    
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
@@ -72,8 +70,11 @@ export const Projects = () => {
                             return (
                               <ProjectCard
                                 key={index}
-                                {...project}
-                                />
+                                title={project.title}
+                                description={project.description}
+                                imgUrl={project.imgUrl}
+                                link={project.link}
+                              />
                             )
                           })
                         }
@@ -92,7 +93,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt="background-shape"/>
     </section>
   )
 }
